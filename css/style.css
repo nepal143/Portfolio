@@ -87,6 +87,26 @@ html {
     box-sizing: border-box;
     outline: none;
 }
+/* scrollbar */
+/* Width of the scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track (the area behind the scrollbar) */
+  ::-webkit-scrollbar-track {
+    background: #525252;
+  }
+  
+  /* Handle (the draggable part of the scrollbar) */
+  ::-webkit-scrollbar-thumb {
+    background: #232323;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #000000;
+  }
 
 .data-heading{
     cursor: context-menu;
