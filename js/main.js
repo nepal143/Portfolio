@@ -277,3 +277,27 @@ window.addEventListener("load", () =>{
         document.querySelector(".preloader").style.display = "none";
     }, 600)
 })
+
+document.getElementById('messageForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    // Collect the form data
+    const formData = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('sender').value,
+        subject: document.getElementById('subject').value,
+        message: document.getElementById('user_dtls').value,
+    };
+
+    // Use EmailJS to send the email
+    emailjs.send('service_o1264bm', 'template_lxgwe91', formData)
+        .then(response => {
+            console.log('Success:', response.status, response.text);
+            alert('Message sent successfully!');
+            event.target.reset(); // Reset the form after successful submission
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Failed to send message');
+        });
+});
