@@ -10,13 +10,14 @@
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="stylesheet" type="text/css" href="css/responsive.css" />
     <!-- default color css  -->
-    <link rel="stylesheet" href="css/skins/color-1.css" disabled>
+    <link rel="stylesheet" href="css/skins/modern-theme.css">
     <link rel="stylesheet" href="css/style-switcher.css">
     <!-- theme colors -->
+    <link rel="stylesheet" class="alternate-style" title="modern-theme" href="/css/skins/modern-theme.css">
     <link rel="stylesheet" class="alternate-style" title="color-1" href="/css/skins/color-1.css" disabled>
     <link rel="stylesheet" class="alternate-style" title="color-2" href="/css/skins/color-2.css" disabled>
     <link rel="stylesheet" class="alternate-style" title="color-3" href="/css/skins/color-3.css" disabled>
-    <link rel="stylesheet" class="alternate-style" title="color-4" href="/css/skins/color-4.css">
+    <link rel="stylesheet" class="alternate-style" title="color-4" href="/css/skins/color-4.css" disabled>
     <link rel="stylesheet" class="alternate-style" title="color-5" href="/css/skins/color-5.css" disabled>
     <!-- fav icon  -->
     <link rel="shortcut icon" href="favicon.ico">
@@ -61,7 +62,6 @@
           <li><a href="#contact" class="link-item outer-shadow hover-in-shadow">Contact</a></li>
         </ul>
       </div>
-      <p class="copyright-text">&copy; 2021 This is demo</p>
 
       <div class="fade-out-effect">
 
@@ -150,16 +150,84 @@
         <!-- about section start -->
         <div class="row">
           <div class="about-tabs">
-            <span class="tab-item outer-shadow active" data-target = ".skills">skills</span>
-            <span class="tab-item" data-target = ".experience">experience</span>
+            <span class="tab-item outer-shadow active" data-target = ".experience">experience</span>
+            <span class="tab-item" data-target = ".skills">skills</span>
             <span class="tab-item" data-target = ".education">education</span>
             <span class="tab-item" data-target = ".achievement">achievement</span>
           </div>
         </div>
         <!-- end -->
+        <!-- experience section start  -->
+        <div class="row">
+          <div class="experience tab-content active">
+            <div class="row">
+              <div class="timeline">
+                <div class="row">
+                   <!-- time line items  -->
+                   <div class="timeline-item">
+                    <div class="timeline-item-inner outer-shadow">
+                      <i class="fas fa-briefcase icon"></i>
+                      <span>May 2025 - Jul 2025</span>
+                      <h3>Mastercard</h3>
+                      <h4>Incoming Software Engineering Intern</h4>
+                      <p>Selected for a Summer 2025 internship at Mastercard, Pune.</p>
+                    </div>
+                  </div>
+                   <div class="timeline-item">
+                    <div class="timeline-item-inner outer-shadow">
+                      <i class="fas fa-briefcase icon"></i>
+                      <span>19 March - 19 July</span>
+                      <h3>Mastercard</h3>
+                      <h4>Software Developer Intern</h4>
+                      <p>Worked as a Java and React Developer in the MDES team at Mastercard. Developed internal tools to enhance team productivity and streamline development processes. Applied expertise in full-stack development using Java and React to create efficient solutions for the Mastercard Digital Enablement Service (MDES) team.</p>
+                    </div>
+                  </div>
+                   <div class="timeline-item">
+                    <div class="timeline-item-inner outer-shadow">
+                      <i class="fas fa-briefcase icon"></i>
+                      <span>Feb 2024 - Mar 2024</span>
+                      <h3>Maidaan (Level Field Pvt. Ltd.)</h3>
+                      <h4>Game Developer</h4>
+                      <p>Designed and developed 3 educational Unity games: Bubble Burst, Cosmic Number Line, and Racoon Runner, focusing on age-appropriate gameplay and UI/UX. Optimized gameplay mechanics for better user engagement and learning outcomes.</p>
+                    </div>
+                  </div>
+                   <div class="timeline-item">
+                    <div class="timeline-item-inner outer-shadow">
+                      <i class="fas fa-briefcase icon"></i>
+                      <span>Mar 2024 - Jun 2024</span>
+                      <h3>Front Benchers Infotech</h3>
+                      <h4>VR Developer Intern</h4>
+                      <p>Developed interactive VR experiences using Unity, creating 3D panoramic and dollhouse views. Developed a real-time multiplayer VR streaming app using Unity Multiplayer.</p>
+                    </div>
+                  </div>
+                  <div class="timeline-item">
+                    <div class="timeline-item-inner outer-shadow">
+                      <i class="fas fa-briefcase icon"></i>
+                      <span>Aug, 2023</span>
+                      <h3>Technical Board</h3>
+                      <h4>Joint Secretary</h4>
+                      <p>As the Backend Developer Lead at AIT Pune's Technical Board, I drive innovation in designing, developing, and optimizing robust backend systems. With a focus on scalability and security, I lead a talented team to deliver seamless solutions that exceed expectations</p>
+                    </div>
+                  </div>
+                  <div class="timeline-item">
+                    <div class="timeline-item-inner outer-shadow">
+                      <i class="fas fa-briefcase icon"></i>
+                      <span>Aug, 2021</span>
+                      <h3>GDXR Club AIT Pune</h3>
+                      <h4>Joint Secretary</h4>
+                      <p>As a Game Developer at Game Development and Extended Reality Club, I craft immersive experiences that push the boundaries of technology and creativity. Leveraging my expertise in game design, programming, and virtual reality, I collaborate with a dynamic team to create engaging and interactive games. From concept to deployment, I thrive on bringing ideas to life and delivering captivating experiences that captivate players.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- experience section end -->
+        
         <!-- skill section start  -->
         <div class="row">
-          <div class="skills tab-content active">
+          <div class="skills tab-content">
             <!-- skill item -->
             <div class="row">
 
@@ -1500,6 +1568,7 @@
     <script src="js/animation.js"></script>
     <script src="js/glassmorphism-animation.js"></script>
     <script src="js/autoTypingAnimation.js"></script>
+    <script src="js/modern-animations.js"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script type="text/javascript">

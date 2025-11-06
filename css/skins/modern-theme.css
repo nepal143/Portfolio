@@ -1,0 +1,135 @@
+:root {
+    --skin-color: #6366f1;
+    --secondary-color: #818cf8;
+    --bg-black-900: #1e1b4b;
+    --bg-black-100: #312e81;
+    --bg-black-50: #4338ca;
+    --text-black-900: #ffffff;
+    --text-black-700: #e0e7ff;
+    --text-black-600: #c7d2fe;
+    --button-text: #ffffff;
+    --button-hover: #f0f0ff;
+    --outer-shadow: 3px 3px 15px #16144080, -3px -3px 15px #16144080;
+    --outer-shadow-0: 0 0 0 #16144080, 0 0 0 #16144080;
+    --inner-shadow: inset 3px 3px 3px #16144080, inset -3px -3px 3px #16144080;
+    --inner-shadow-0: inset 0 0 0 #16144080, inset 0 0 0 #16144080;
+}
+
+/* Modern glassmorphism effects */
+.outer-shadow {
+    box-shadow: var(--outer-shadow);
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.inner-shadow {
+    box-shadow: var(--inner-shadow);
+    backdrop-filter: blur(5px);
+}
+
+/* Gradient animations */
+.section-title h2 {
+    background: linear-gradient(45deg, var(--skin-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: gradient 3s ease infinite;
+    background-size: 200% 200%;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Modern button styles */
+.btn-1 {
+    background: linear-gradient(45deg, var(--skin-color), var(--secondary-color));
+    border: none;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    padding: 12px 25px;
+}
+
+.btn-1:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(45deg, var(--secondary-color), var(--skin-color));
+    color: #ffffff !important;
+}
+
+.btn-1:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Make sure links in buttons are visible */
+.btn-1 a, .btn-1 span {
+    color: #ffffff !important;
+    text-decoration: none;
+}
+
+/* Add subtle button glow effect */
+.btn-1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+
+.btn-1:hover::before {
+    opacity: 1;
+}
+
+/* Animated skill bars */
+.skill-item .progress-bar {
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-item .progress-bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    animation: progress-shine 2s infinite;
+}
+
+@keyframes progress-shine {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* Portfolio item hover effects */
+.portfolio-item-inner {
+    transition: all 0.3s ease;
+}
+
+.portfolio-item-inner:hover {
+    transform: translateY(-10px);
+}
